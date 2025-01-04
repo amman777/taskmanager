@@ -1,0 +1,147 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    right: 20px; 
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+.dropdown .btn-dark {
+    font-size: 0.8rem;
+}
+
+/* Task Manager Text (Responsive Adjustments) */
+@media (max-width: 425px) {
+    .navbar-brand {
+        font-size: 12px; /* Reduce font size for mobile */
+    }
+
+    .dropdown .btn-dark {
+        font-size: 0.5rem;
+        padding: 5px 10px; 
+    }
+
+    .dropdown-menu .dropdown-item {
+        font-size: 0.5rem;
+    }
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 33%;
+    height: 70vh;
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjust container width for smaller screens */
+    }
+}
+
+/* Date Input */
+#global-date-input {
+    background-color: #1E1E1E;
+    color: white;
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#global-date-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+@media (max-width: 425px) {
+    #global-date-input {
+        font-size: 0.5rem;
+        padding: 5px; 
+    }
+}
+
+/* Task List Styles */
+#task-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    overflow-y: scroll;  /* Allow scrolling */
+    scrollbar-width: thin;  /* For Firefox */
+    scrollbar-color: transparent transparent;  /* For Firefox */
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+#task-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Task Item Styles */
+.list-group-item {
+    background-color: #1E1E1E;
+    color: white;
+    border: none;
+}
+
+/* Completed Task Styles */
+.completed strong {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Input and Button Styles */
+#task-input {
+    background-color: #1E1E1E;
+    color: white;
+}
+
+/* Placeholder Styles for Task Input */
+#task-input::placeholder {
+    color: white;
+    font-weight: 100;
+}
+
+/* Delete Button Styles */
+.btn-dark {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
